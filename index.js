@@ -52,6 +52,12 @@ document.querySelector("#primos").innerHTML = primos;
 const serieFibonacci = fibonacci(primos.length, true);
 // console.log("serie", serieFibonacci);
 
+const sumaPrimos = primos.reduce(
+  (acc, curr) => acc + curr,
+  0
+);
+document.querySelector("#sumatoriaPrimos").innerHTML = sumaPrimos;
+
 const primosInFibonacci = [];
 primos.forEach((primo) => {
   if (serieFibonacci.includes(primo)) {
@@ -65,5 +71,5 @@ const sumaPrimosFibonacci = primosInFibonacci.reduce(
   (acc, curr) => acc + curr,
   0
 );
-document.querySelector("#sumaPrimos").innerHTML = sumaPrimosFibonacci;
+document.querySelector("#sumaPrimosFib").innerHTML = sumaPrimosFibonacci;
 // console.log("suma", sumaPrimosFibonacci);
